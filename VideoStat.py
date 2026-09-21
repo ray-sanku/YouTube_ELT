@@ -104,7 +104,7 @@ def extractVideoData(videoID_list, batch_size, key):
     return extracted_data
 
 def save_to_json(extracted_data):
-    file_path = f'./data/YT_data_{date.today()}.json'
+    file_path = f'./data/YT_data_{channel_handle}_{date.today()}.json'
 
     with open(file=file_path, encoding="utf-8",mode='w') as json_output_file:
         json.dump(extracted_data, json_output_file, indent=4, ensure_ascii=False)
